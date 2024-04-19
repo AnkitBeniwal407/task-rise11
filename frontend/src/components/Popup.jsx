@@ -28,9 +28,9 @@ const Popup = ({ setShowPopup, popupContent, setUpdateUI, userId }) => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             type="text"
-            placeholder="Update ToDo..."
+            placeholder="Update To-Do"
           />
-          <button onClick={updateToDo}>Update</button>
+          <button onClick={updateToDo}>Update Todo</button>
         </div>
       </div>
     </div>
