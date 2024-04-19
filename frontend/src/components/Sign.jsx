@@ -29,7 +29,7 @@ function SignUp() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await fetch('http://localhost:4000/api/user/signup', {
+        await fetch('http://localhost:5000/api/user/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
@@ -86,7 +86,7 @@ function SignIn() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await fetch('http://localhost:4000/api/user/signin', {
+        await fetch('http://localhost:5000/api/user/signin', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json; charset=utf-8' },
             body: JSON.stringify({ email, password })
