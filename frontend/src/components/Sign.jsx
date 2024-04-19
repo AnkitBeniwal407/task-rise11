@@ -15,9 +15,9 @@ function Sign() {
             }
             {
                 signin ?
-                    <h1 className="switch" onClick={() => setSignin(!signin)}>Already have an Account ? SignIn</h1>
-                    :
                     <h1 className="switch" onClick={() => setSignin(!signin)}>Do Not have any Account ? SignUp</h1>
+                    :
+                    <h1 className="switch" onClick={() => setSignin(!signin)}>Already have an Account ? SignIn</h1>
             }
         </>
     )
@@ -71,7 +71,7 @@ function SignUp() {
                         required
                     />
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit">SignUp</button>
             </form>
         </div>
     );
@@ -127,10 +127,10 @@ function SignIn() {
                         required
                     />
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit">SignIn</button>
             </form>
         </div>
     );
 }
 
-export default Sign
+export default Sign;
