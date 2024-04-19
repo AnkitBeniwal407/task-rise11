@@ -15,9 +15,9 @@ function Sign() {
             }
             {
                 signin ?
-                    <h1 className="switch" onClick={() => setSignin(!signin)}>Do Not have any Account ? SignUp</h1>
+                    <h1 className="switch" onClick={() => setSignin(!signin)}>Do not have any account ? Create Now</h1>
                     :
-                    <h1 className="switch" onClick={() => setSignin(!signin)}>Already have an Account ? SignIn</h1>
+                    <h1 className="switch" onClick={() => setSignin(!signin)}>Already have an account ? SignIn</h1>
             }
         </>
     )
@@ -29,7 +29,7 @@ function SignUp() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await fetch('http://localhost:5000/api/user/signup', {
+        await fetch('http://localhost:4000/api/user/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
@@ -49,11 +49,12 @@ function SignUp() {
 
     return (
         <div className="login-container">
-            <h2>SignUp</h2>
+            <h2>Sign Up</h2><br></br>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="email">Email:</label>
+                    {/* <label htmlFor="email">Email:</label> */}
                     <input
+                    placeholder='Enter your email ID'
                         type="email"
                         id="email"
                         value={email}
@@ -62,8 +63,9 @@ function SignUp() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="password">Password:</label>
+                    {/* <label htmlFor="password">Password:</label> */}
                     <input
+                    placeholder='Enter your password'
                         type="password"
                         id="password"
                         value={password}
@@ -71,7 +73,7 @@ function SignUp() {
                         required
                     />
                 </div>
-                <button type="submit">SignUp</button>
+                <button type="submit">Sign Up</button>
             </form>
         </div>
     );
@@ -84,7 +86,7 @@ function SignIn() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await fetch('http://localhost:5000/api/user/signin', {
+        await fetch('http://localhost:4000/api/user/signin', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json; charset=utf-8' },
             body: JSON.stringify({ email, password })
@@ -105,11 +107,12 @@ function SignIn() {
     };
     return (
         <div className="login-container">
-            <h2>SignIn</h2>
+            <h2>SignIn</h2><br></br>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="email">Email:</label>
+                    {/* <label htmlFor="email">Email:</label> */}
                     <input
+                    placeholder='Enter your email ID'
                         type="email"
                         id="email"
                         value={email}
@@ -118,8 +121,9 @@ function SignIn() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="password">Password:</label>
+                    {/* <label htmlFor="password">Password:</label> */}
                     <input
+                    placeholder='Enter your email ID'
                         type="password"
                         id="password"
                         value={password}
