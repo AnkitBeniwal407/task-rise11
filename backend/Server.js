@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-require("dotenv").config();
+// require("dotenv").config();
 
 const routesToDo = require("./routes/ToDoRoutes");
 const routesUser = require("./routes/userRoutes");
@@ -8,14 +8,14 @@ const routesUser = require("./routes/userRoutes");
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 // Middleware
 app.use(express.json());
 app.use(cors());
 
 mongoose
-  .connect('mongodb://localhost:27017/todo')
+  .connect('mongodb://0.0.0.0:27017/todo')
   .then(() => console.log("MongoDB connected..."))
   .catch((err) => console.log(err));
 
