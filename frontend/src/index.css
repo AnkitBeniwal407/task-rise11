@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #252525;
+  background-color: #00564b;
   color: #fff;
 }
 
@@ -44,9 +44,11 @@ button {
   color: #fff;
   outline: none;
   border: none;
+  border: 2px solid black;
 }
 
 input {
+  border: 2px solid black;
   width: 200px;
 }
 
@@ -67,6 +69,7 @@ button:hover {
 }
 
 .toDo {
+  border: 2px solid black;
   background-color: #696969;
   padding: 10px 20px;
   display: flex;
